@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html>
-<body onload="loadDoc();">
 
-<div id="demo">
-</div>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-<script>
-function loadDoc() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-     document.getElementById("demo").innerHTML = this.responseText;
-    }
-  };
-  xhttp.open("GET", "customers.php", true);
-  xhttp.send();
-}
-</script>
+    <script>
+            $(document).ready(function () {
+                $("#demo").load(" url:"http://csis.svsu.edu/~nrsenjal/prog05/www/customers.php");
+            });
+        </script>
+</head>
+
+<body>
+
+    <div id="demo">
+    </div>
+
 </body>
+
 </html>
